@@ -1,0 +1,77 @@
+/* Navigation Bar Styling */
+nav {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 67, 67); /* Dark background color */
+    padding: 20px 10px; /* Increase padding to make the nav bar thicker */
+    height: 80px; /* Set an explicit height for the nav bar */
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Horizontal layout */
+}
+
+nav ul li {
+    display: inline-block; /* Makes list items inline */
+    padding-left: 40px; /* Adds space between items */
+    padding-right: 40px; /* Adds space between items */
+    font-size: 18px; /* Larger font size for the links */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: rgb(225, 213, 213); /* Light color for links */
+    font-size: 18px; /* Font size similar to home.css */
+}
+
+nav a:hover {
+    color: rgb(16, 16, 163); /* Change color on hover to blue */
+}
+
+/* Ensure Section Styling is Unaffected */
+.section1, .section2, .section3, .section4, .section5 {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 30px;  /* Adds space between sections */
+}
+
+/* Chart container styling */
+#rq3-chart {
+    min-height: 400px; /* Ensure chart is visible */
+    margin-bottom: 40px; /* Adds margin below chart */
+}
+
+/* Filters and Checkboxes Styling */
+#filters div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Layout for .row1, .row2, .row3, .row4 */
+.row1, .row2, .row3, .row4 {
+    display: block; /* Avoid flexbox that might interfere with chart */
+    padding: 10px;
+    width: 100%;
+}
+
+/* Wrapper and Background Styling */
+#wrapper {
+    background-color: #90c7e3;
+    background-image: linear-gradient(white, lightblue);
+    background-repeat: no-repeat;
+}
+
+/* General Body Alignment */
+body {
+    text-align: center;
+}
