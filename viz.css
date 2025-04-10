@@ -1,0 +1,66 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid gray;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* Ensures sections have some height */
+}
+
+.question {
+    font-size: 1.5rem;
+    font-weight: normal; /* No bold text for the question */
+    width: 40%; /* Takes up 40% of the section width */
+    margin-right: 5%;
+    line-height: 1.6;
+}
+
+.visualization {
+    width: 60%; /* Takes up 60% of the section width */
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Makes sure it expands with the section */
+    color: #888;
+}
+
+.visualization .chart {
+    width: 100%;
+    height: 100%;
+    background-color: #d3d3d3; /* Placeholder for visualizations */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Apply horizontal scrolling only to the iframe wrapper in Section 5 */
+.iframe-wrapper-scroll {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrolling */
+}
+
+/* Styling for the iframe */
+iframe {
+    width: 100%; /* Make the iframe take full width */
+    height: 100%; /* Make the iframe take full height */
+    min-width: 1200px; /* Ensure content width triggers horizontal scrolling */
+    min-height: 600px; /* Allow vertical scrolling when content overflows */
+    border: none; /* Remove iframe border */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}

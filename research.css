@@ -41,21 +41,7 @@ nav a:hover {
     margin-bottom: 30px;  /* Adds space between sections */
 }
 
-/* Chart container styling */
-#rq3-chart {
-    min-height: 400px; /* Ensure chart is visible */
-    margin-bottom: 40px; /* Adds margin below chart */
-}
 
-/* Filters and Checkboxes Styling */
-#filters div {
-    margin-bottom: 15px;
-}
-
-label {
-    display: inline-block;
-    margin-right: 15px;
-}
 
 /* Layout for .row1, .row2, .row3, .row4 */
 .row1, .row2, .row3, .row4 {
@@ -75,3 +61,4 @@ label {
 body {
     text-align: center;
 }
+

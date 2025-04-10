@@ -35,63 +35,12 @@
                 </div>
             </div>
             <div class="row3">
-                <div class = "section3">
+                <div class="section3">
                     <h3>Research Question 3:</h3>
-                    <p>Are certain demographics (men, women, race, age) more prone to 
-                        getting certain diseases?</p>
-
-                        <!-- Filters -->
-                        <div id="filters" class="mb-4">
-                            <div>
-                              <strong>Gender:</strong><br />
-                              <label><input type="checkbox" name="gender" value="All" checked> All</label>
-                              <label><input type="checkbox" name="gender" value="Male"> Male</label>
-                              <label><input type="checkbox" name="gender" value="Female"> Female</label>
-                            </div>
-                            <div>
-                              <strong>Race:</strong><br />
-                              <label><input type="checkbox" name="race" value="All" checked> All</label>
-                              <label><input type="checkbox" name="race" value="White"> White</label>
-                              <label><input type="checkbox" name="race" value="Black"> Black</label>
-                              <label><input type="checkbox" name="race" value="Asian"> Asian</label>
-                              <label><input type="checkbox" name="race" value="American Indian/Alaskan Native"> American Indian/Alaskan Native</label>
-                              <label><input type="checkbox" name="race" value="Other"> Other</label>
-                            </div>
-                            <div>
-                              <strong>Age:</strong><br />
-                              <label><input type="checkbox" name="age" value="All" checked> All</label>
-                              <label><input type="checkbox" name="age" value="18-24"> 18-24</label>
-                              <label><input type="checkbox" name="age" value="25-29"> 25-29</label>
-                              <label><input type="checkbox" name="age" value="30-34"> 30-34</label>
-                              <label><input type="checkbox" name="age" value="35-39"> 35-39</label>
-                              <label><input type="checkbox" name="age" value="40-44"> 40-44</label>
-                              <label><input type="checkbox" name="age" value="45-49"> 45-49</label>
-                              <label><input type="checkbox" name="age" value="50-54"> 50-54</label>
-                              <label><input type="checkbox" name="age" value="55-59"> 55-59</label>
-                              <label><input type="checkbox" name="age" value="60-64"> 60-64</label>
-                              <label><input type="checkbox" name="age" value="65-69"> 65-69</label>
-                              <label><input type="checkbox" name="age" value="70-74"> 70-74</label>
-                              <label><input type="checkbox" name="age" value="75-79"> 75-79</label>
-                              <label><input type="checkbox" name="age" value="80 or older"> 80 or older</label>
-                            </div>
-                            <div class="mt-3">
-                              <label><strong>Group/Stack By:</strong>
-                                <select id="stackby-select" class="form-select d-inline w-auto">
-                                  <option value="None">None</option>
-                                  <option value="Sex">Gender</option>
-                                  <option value="Race">Race</option>
-                                  <option value="AgeCategory">Age Category</option>
-                                </select>
-                              </label>
-                            </div>
-                          </div>
-                      
-                          <!-- Chart Title -->
-                          <h4 id="chart-title" class="mt-3"></h4>
-                          <!-- Chart -->
-                          <div id="rq3-chart" class="mt-2"></div>
+                    <p>Are certain demographics (men, women, race, age) more prone to getting certain diseases?</p>
                 </div>
             </div>
+          
             <div class="row4">
                 <div class = "section4">
                     <h3>Research Question 4:</h3>
@@ -106,124 +55,6 @@
             </div>
         </main>
     </div>
-    <!-- Plot + D3 -->
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-    <script>
-    const diseases = ["HeartDisease", "Stroke", "Asthma", "KidneyDisease", "Diabetic", "SkinCancer"];
-    let data;
-    
-    d3.csv("heart_2020_cleaned.csv", d3.autoType).then(csv => {
-      data = csv;
-      updateChart();
-    });
-    
-    // Helper to get selected values with exclusive "All" logic
-    function getSelectedValues(name) {
-      const checkboxes = [...document.querySelectorAll(`input[name="${name}"]`)];
-      const selected = checkboxes.filter(cb => cb.checked).map(cb => cb.value);
-    
-      if (selected.includes("All")) return ["All"];
-      return selected.length ? selected : ["All"];
-    }
-    
-    function updateChart() {
-      const genders = getSelectedValues("gender");
-      const races = getSelectedValues("race");
-      const ages = getSelectedValues("age");
-      const stackBy = document.getElementById("stackby-select").value;
-    
-      const filtered = data.filter(d =>
-        (genders.includes("All") || genders.includes(d.Sex)) &&
-        (races.includes("All") || races.includes(d.Race)) &&
-        (ages.includes("All") || ages.includes(d.AgeCategory))
-      );
-    
-      // Build dynamic chart title
-      let title = "Prevalence of Diseases";
-      if (!genders.includes("All")) title += ` for ${genders.join(", ")}`;
-      if (!races.includes("All")) title += `, ${races.join(", ")}`;
-      if (!ages.includes("All")) title += `, aged ${ages.join(", ")}`;
-      document.getElementById("chart-title").textContent = title;
-    
-      let plotData;
-      if (stackBy !== "None") {
-        const groups = Array.from(new Set(filtered.map(d => d[stackBy])));
-        plotData = groups.flatMap(group => {
-          const subset = filtered.filter(d => d[stackBy] === group);
-          const total = subset.length;
-          return diseases.map(disease => ({
-            group,
-            disease,
-            percent: total > 0 ? subset.filter(d => d[disease] === "Yes").length / total * 100 : 0
-          }));
-        });
-      } else {
-        const total = filtered.length;
-        plotData = diseases.map(disease => ({
-          disease,
-          percent: total > 0 ? filtered.filter(d => d[disease] === "Yes").length / total * 100 : 0
-        }));
-      }
-    
-      const chart = stackBy !== "None"
-        ? Plot.plot({
-            x: { label: "Disease" },
-            y: { label: "Prevalence (%)" },
-            color: { legend: true, label: stackBy, type: "categorical" },
-            marks: [
-              Plot.barY(plotData, {
-                x: "disease",
-                y: "percent",
-                fill: "group",
-                stack: true,
-                tip: true
-              }),
-              Plot.ruleY([0])
-            ]
-          })
-        : Plot.plot({
-            x: { label: "Disease" },
-            y: { label: "Prevalence (%)" },
-            marks: [
-              Plot.barY(plotData, {
-                x: "disease",
-                y: "percent",
-                fill: "#4e79a7",
-                tip: true
-              }),
-              Plot.ruleY([0])
-            ]
-          });
-    
-      document.getElementById("rq3-chart").innerHTML = "";
-      document.getElementById("rq3-chart").append(chart);
-    }
-    
-    // Add checkbox behavior for exclusive "All" selection
-    document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-      cb.addEventListener("change", () => {
-        const name = cb.name;
-        const all = document.querySelector(`input[name="${name}"][value="All"]`);
-        const others = [...document.querySelectorAll(`input[name="${name}"]:not([value="All"])`)];
-    
-        if (cb.value === "All" && cb.checked) {
-          others.forEach(c => (c.checked = false));
-        } else if (cb.checked) {
-          all.checked = false;
-        } else {
-          const noneChecked = others.every(c => !c.checked);
-          if (noneChecked) all.checked = true;
-        }
-    
-        updateChart();
-      });
-    });
-    
-    // Listen for group-by dropdown
-    document.getElementById("stackby-select").addEventListener("change", updateChart);
-    </script>
-    
 
 </body>
 </html>
