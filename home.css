@@ -96,6 +96,9 @@ main{
     background-color: #90c7e3;
     background-image: linear-gradient(white,lightblue);
     background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
 body{

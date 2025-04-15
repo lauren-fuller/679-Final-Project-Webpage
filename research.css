@@ -56,15 +56,41 @@ nav a:hover {
     width: 100%;
 }
 
-/* Wrapper and Background Styling */
-#wrapper {
+#wrapper{
     background-color: #90c7e3;
-    background-image: linear-gradient(white, lightblue);
+    background-image: linear-gradient(white,lightblue);
     background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
 /* General Body Alignment */
 body {
     text-align: center;
+}
+
+.viz-header {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* light gray or match the viz.html tone */
+    text-align: center;
+    border-bottom: 2px solid gray;
+    box-shadow: none; /* removes boxy shadow */
+    border-radius: 0; /* removes rounded corners */
+    margin: 0 auto;
+}
+
+
+.viz-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.viz-header p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
