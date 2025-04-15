@@ -1,28 +1,35 @@
-nav{
+nav {
     font-weight: bold;
     text-align: center;
     display: flex;
-    background-color:rgb(51, 67, 67);
-    padding: 10px;
-
-}
-nav ul{
-}
-
-nav ul li{
-    list-style-type: none;
-    display: inline-block;
-    padding-left: 100px;
-    font-size: large;
-}
-  
-nav a{
-    text-decoration: none;
-    color: rgb(225, 213, 213);
+    justify-content: center;
+    background-color: rgb(51, 67, 67); /* Dark background color */
+    padding: 20px 10px; /* Increase padding to make the nav bar thicker */
+    height: 80px; /* Set an explicit height for the nav bar */
 }
 
-nav a:hover{
-    color: rgb(16, 16, 163);
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes margin */
+    display: flex; /* Horizontal layout */
+}
+
+nav ul li {
+    display: inline-block; /* Makes list items inline */
+    padding-left: 40px; /* Adds space between items */
+    padding-right: 40px; /* Adds space between items */
+    font-size: 18px; /* Larger font size for the links */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: rgb(225, 213, 213); /* Light color for links */
+    font-size: 18px; /* Font size similar to home.css */
+}
+
+nav a:hover {
+    color: rgb(16, 16, 163); /* Change color on hover to blue */
 }
 
 .row1, .row2, .row3, .row4, .row5{
@@ -44,6 +51,7 @@ nav a:hover{
     padding: 10px;
 }
   
+
  /* nav ul {
     list-style: none;
 } */

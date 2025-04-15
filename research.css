@@ -35,13 +35,19 @@ nav a:hover {
 
 /* Ensure Section Styling is Unaffected */
 .section1, .section2, .section3, .section4, .section5 {
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 2px solid gray;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin: 15px auto; /* ⬅️ This centers the section horizontally */
+
+
+    /* Restrict width */
+    max-width: 96%;
     border-radius: 8px;
-    margin-bottom: 30px;  /* Adds space between sections */
 }
-
-
 
 /* Layout for .row1, .row2, .row3, .row4 */
 .row1, .row2, .row3, .row4 {

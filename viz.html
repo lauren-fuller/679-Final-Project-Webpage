@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
-    <title>Visualizations</title>
+    <title>Visualizations</title>          
+
     <style>
         section {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin: 20px 0;
+            margin: 40px auto;
             padding: 20px;
             border: 2px solid gray;
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             min-height: 300px; /* Ensures sections have some height */
+            
+            /* Restrict width */
+            max-width: 95%;
+            border-radius: 8px; /* Optional: rounded corners like cards */
         }
 
         .question {
@@ -29,6 +34,7 @@
 
         .visualization {
             width: 60%; /* Takes up 60% of the section width */
+            overflow: auto; /* Allows scrolling if content overflows */
             background-color: #f0f0f0;
             border: 1px dashed #ccc;
             display: flex;
@@ -38,13 +44,28 @@
             color: #888;
         }
 
-        .visualization .chart {
-            width: 100%;
-            height: 100%;
-            background-color: #d3d3d3; /* Placeholder for visualizations */
+        .viz-header {
+            height: 200px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            background-color: #ffffff;
+
+            /* Matching border & shadow */
+            border: 2px solid gray;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .viz-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        }
+
+        .viz-header p {
+        font-size: 1.2rem;
+        color: #666;
         }
 
         header h1 {
@@ -72,10 +93,11 @@
         </nav>
 
         <!-- Header Section (Optional) -->
-        <header>
+        <header class="viz-header">
             <h1>Visualizations</h1>
             <p>Explore the various visualizations related to heart disease, kidney disease, and more.</p>
         </header>
+          
 
         <!-- Main Content -->
         <main>
@@ -86,7 +108,7 @@
                 </div>
                 <div class="visualization">
                     <!-- First Chart for Disease Co-occurrences -->
-                    <iframe width="92%" height="700" frameborder="0" src="https://observablehq.com/embed/39b1cdc937865ffd@315?cells=chart1"></iframe>
+                    <iframe width="100%" height="550" frameborder="0" src="https://observablehq.com/embed/39b1cdc937865ffd?cells=chart1"></iframe>
                 </div>
             </section>
 
@@ -96,8 +118,9 @@
                     <p><strong>Research Question 2:</strong><br>How do lifestyle factors (smoking, alcohol, physical activity) influence disease occurrence?</p>
                 </div>
                 <div class="visualization">
-                    <!-- Placeholder for second data visualization -->
-                    <div class="chart">Chart 2</div>
+                    <!-- Observable Notebook Embed -->
+                    <iframe width="100%" height="500" frameborder="0"
+                     src="https://observablehq.com/embed/16437c2219368b93@392?cells=viewof+chartSelector%2CchartDisplay"></iframe>
                 </div>
             </section>
 
@@ -108,7 +131,7 @@
               </div>
               <div class="visualization">
                   <!-- Observable Notebook Embed -->
-                  <iframe width="85%" height="700" frameborder="0"
+                  <iframe width="100%" height="710" frameborder="0"
                     src="https://observablehq.com/embed/234ad9cb23a85548?cells=viewof+selectedGenders%2Cviewof+selectedRaces%2Cviewof+selectedAges%2Cviewof+stackBy%2Cchart"></iframe>
               </div>
             </section>
@@ -120,7 +143,8 @@
                 </div>
                 <div class="visualization">
                     <!-- Second Chart for Disease Co-occurrences -->
-                    <iframe width="70%" height="650" frameborder="0" src="https://observablehq.com/embed/91b8027dd4dd7e4e@319?cells=chart2"></iframe>
+                    <iframe width="100%" height="720" frameborder="0"
+                     src="https://observablehq.com/embed/91b8027dd4dd7e4e@322?cells=chart2"></iframe>               
                 </div>
             </section>
 
@@ -131,7 +155,8 @@
                 </div>
                 <div class="visualization">
                     <!-- Observable Notebook Embed  -->
-                    <iframe width="100%" height="700" frameborder="0" src="https://observablehq.com/embed/873dd4dfea8c0118@148?cells=viewof+selectedGender%2Cviewof+selectedRace%2Cviewof+selectedAge%2CdiseaseTreeChart"></iframe>
+                    <iframe width="100%" height="1750" frameborder="0"
+                    src="https://observablehq.com/embed/873dd4dfea8c0118@155?cells=viewof+selectedGender%2Cviewof+selectedRace%2Cviewof+selectedAge%2CdiseaseTreeChart"></iframe>                
                 </div>
             </section>
 
@@ -142,10 +167,17 @@
                 </div>
                 <div class="visualization">
                     <!-- Placeholder for fifth data visualization -->
-                    <div class="chart">Chart 6</div>
+                    <iframe width="100%" height="575" frameborder="0"
+                     src="https://observablehq.com/embed/f34bd6f6c274734e@70?cells=chartGrid%2Cviewof+diseaseSelect%2Csummary"></iframe>
                 </div>
             </section>
         </main>
     </div>
+
+    <script type="module">
+        import { observe } from "https://static.observableusercontent.com/resize-observer/3.2.0/auto.js";
+        observe(document.querySelectorAll("iframe"));
+    </script>
+
 </body>
 </html>
