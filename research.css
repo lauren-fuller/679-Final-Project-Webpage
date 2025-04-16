@@ -1,96 +1,97 @@
-/* Navigation Bar Styling */
+/* Navigation Bar Container */
 nav {
     font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: center;
-    background-color: rgb(51, 67, 67); /* Dark background color */
-    padding: 20px 10px; /* Increase padding to make the nav bar thicker */
-    height: 80px; /* Set an explicit height for the nav bar */
+    background-color: rgb(51, 67, 67); 
+    padding: 20px 10px; 
+    height: 80px; 
 }
 
+/* Navigation List Styling */
 nav ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes margin */
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
     display: flex; /* Horizontal layout */
 }
 
+/* Navigation Items */
 nav ul li {
-    display: inline-block; /* Makes list items inline */
-    padding-left: 40px; /* Adds space between items */
-    padding-right: 40px; /* Adds space between items */
-    font-size: 18px; /* Larger font size for the links */
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
 }
 
+/* Navigation Link Styling */
 nav a {
-    text-decoration: none; /* Removes underline from links */
-    color: rgb(225, 213, 213); /* Light color for links */
-    font-size: 18px; /* Font size similar to home.css */
+    text-decoration: none; /* Removes underline */
+    color: rgb(225, 213, 213); 
+    font-size: 18px;
 }
 
+/* Navigation Hover Effect */
 nav a:hover {
-    color: rgb(16, 16, 163); /* Change color on hover to blue */
+    color: rgb(16, 16, 163); 
 }
 
-/* Ensure Section Styling is Unaffected */
+/* Section Styling for Survey or Analysis Blocks */
 .section1, .section2, .section3, .section4, .section5 {
     padding: 40px;
     background-color: #ffffff;
     border: 2px solid gray;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    margin: 15px auto; /* ⬅️ This centers the section horizontally */
-
-
-    /* Restrict width */
-    max-width: 96%;
-    border-radius: 8px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 15px auto;
+    max-width: 75%; 
 }
 
-/* Layout for .row1, .row2, .row3, .row4 */
+/* Layout for General Row Sections */
 .row1, .row2, .row3, .row4 {
-    display: block; /* Avoid flexbox that might interfere with chart */
+    display: block;
     padding: 10px;
     width: 100%;
 }
 
-#wrapper{
+/* Page Wrapper Styling */
+#wrapper {
     background-color: #90c7e3;
-    background-image: linear-gradient(white,lightblue);
+    background-image: linear-gradient(white, lightblue); 
     background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
 }
 
-/* General Body Alignment */
+/* Body Text Alignment */
 body {
     text-align: center;
 }
 
+/* Header Container */
 .viz-header {
     width: 100%;
     padding: 40px 20px;
-    background-color: #f8f9fa; /* light gray or match the viz.html tone */
+    background-color: #f8f9fa; 
     text-align: center;
     border-bottom: 2px solid gray;
-    box-shadow: none; /* removes boxy shadow */
-    border-radius: 0; /* removes rounded corners */
+    box-shadow: none;
+    border-radius: 0; /* Flat corners */
     margin: 0 auto;
 }
 
-
+/* Header Title Styling */
 .viz-header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
+/* Header Description Text */
 .viz-header p {
     font-size: 1.2rem;
     color: #555;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
-

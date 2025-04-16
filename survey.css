@@ -1,37 +1,41 @@
+/* Header Container */
 .viz-header {
     width: 100%;
     padding: 20px 10px;
-    background-color: #f8f9fa; /* light gray or match the viz.html tone */
+    background-color: #f8f9fa;
     text-align: center;
-    border-bottom: 2px solid gray;
-    box-shadow: none; /* removes boxy shadow */
-    border-radius: 0; /* removes rounded corners */
-    margin: 0 auto;
+    border-bottom: 2px solid gray; 
+    box-shadow: none; 
+    border-radius: 0; /* Flat, squared corners */
+    margin: 0 auto; /* Centered horizontally */
 }
 
-
+/* Header Title Styling */
 .viz-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
 }
 
+/* Header Description or Subtitle */
 .viz-header p {
     font-size: 1.2rem;
     color: #555;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* Limit line length for better readability */
+    margin: 0 auto; /* Centered text block */
 }
 
+/* Top spacing override for Bootstrap container-fluid (if used) */
 .container-fluid {
     margin-top: 30px;
 }
 
+/* Survey Box Styling (used in survey.html or similar) */
 .survey-box {
-    padding: 40px;
-    background-color: #ffffff;
-    border: 2px solid gray;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 30px auto; /* centers it with spacing */
+    padding: 40px; 
+    background-color: #ffffff; 
+    border: 2px solid gray; 
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 900px; 
+    margin: 30px auto; /* Centered horizontally with vertical spacing */
 }

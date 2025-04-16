@@ -1,106 +1,73 @@
+/* Navigation Bar Container */
 nav {
     font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: center;
-    background-color: rgb(51, 67, 67); /* Dark background color */
-    padding: 20px 10px; /* Increase padding to make the nav bar thicker */
-    height: 80px; /* Set an explicit height for the nav bar */
+    background-color: rgb(51, 67, 67);
+    padding: 20px 10px;
+    height: 80px;
 }
 
+/* Navigation List */
 nav ul {
     list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Removes margin */
-    display: flex; /* Horizontal layout */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal layout for menu items */
 }
 
+/* Navigation List Items */
 nav ul li {
-    display: inline-block; /* Makes list items inline */
-    padding-left: 40px; /* Adds space between items */
-    padding-right: 40px; /* Adds space between items */
-    font-size: 18px; /* Larger font size for the links */
+    display: inline-block; /* Align items in one line */
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
 }
 
+/* Navigation Links */
 nav a {
-    text-decoration: none; /* Removes underline from links */
-    color: rgb(225, 213, 213); /* Light color for links */
-    font-size: 18px; /* Font size similar to home.css */
+    text-decoration: none; /* Removes underlines */
+    color: rgb(225, 213, 213); 
+    font-size: 18px;
 }
 
+/* Hover Effect on Navigation Links */
 nav a:hover {
-    color: rgb(16, 16, 163); /* Change color on hover to blue */
+    color: rgb(16, 16, 163);
 }
 
-.row1, .row2, .row3, .row4, .row5{
-    display: flex;
-    flex-wrap: wrap;
+/* Layout for each main row section */
+.row1, .row2, .row3, .row4, .row5 {
+    display: flex; /* Side-by-side layout */
+    flex-wrap: wrap; /* Wrap on smaller screens */
     justify-content: space-between;
-    align-items: flex-start; 
-    padding:0px; 
-    width:100%;
+    align-items: flex-start;
     padding: 10px;
-    border: 2px solid gray;
+    width: 100%;
+    border: 2px solid gray; /* Outline for the section */
     height: 350px;
 }
 
-.viz1, .viz2{
-    flex: 1;
+/* Container for individual visualizations */
+.viz1, .viz2 {
+    flex: 1; /* Take equal space */
     display: flex;
     font-size: small;
     padding: 10px;
 }
-  
 
- /* nav ul {
-    list-style: none;
-} */
-/*
-nav ul ul{
-    position: absolute; 
-    padding: 0; 
-    display: none;
-    background-color: #bcbdc1;
-}
-
-nav ul ul li{
-    border: 1px solid #00005d; 
-    display: block;
-    width: 7em;
-    padding: 5px;
-    margin-left: 0;
-    padding-left: 1em;
-}
-
-nav li:hover ul{
-    display: block;
-}
-
-nav li{
-    border-bottom: 1px solid darkblue;
-} */
-
-/* main li{
-    padding:5px;
-}
-main{
-    display: flex;
-    background-color: whitesmoke;
-    overflow: auto; 
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-} */
-
-#wrapper{
-    background-color: #90c7e3;
-    background-image: linear-gradient(white,lightblue);
+/* Page Wrapper (main background styling) */
+#wrapper {
+    background-color: #90c7e3; 
+    background-image: linear-gradient(white, lightblue);
     background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Ensures wrapper fills the whole screen */
     display: flex;
     flex-direction: column;
 }
 
-body{
+/* Default Body Styling */
+body {
     text-align: center;
 }
