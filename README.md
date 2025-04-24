@@ -21,27 +21,30 @@ No need to download or run the code locally — simply click the link below to e
 
 ## 📁 Repository Contents
 
-### `.html` & `.css` Files
-- Each `.html` file corresponds to a different page on the website (e.g., home, visualizations, survey).
-- Each `.html` file is paired with a `.css` file that handles layout, styling, and responsiveness.
-- The `index.html` file **does not** have an associated CSS file. Its only purpose is to initialize the deployment via GitHub Pages and redirect users to the homepage.
+### Final Analysis Report
+- This report outlines the background and motivation behind the project.
+- It provides a detailed explanation of the codebase, the algorithms used, and how the different files work together.
+- The document serves as a comprehensive overview of the development process and technical implementation.
 
 ### `Observable Notebooks`
 - This folder contains all the JavaScript (D3.js) code used to create the six main visualizations and the heart disease predictor tool.
 - These notebooks are embedded into the website using iframes and allow for interactive filtering, grouping, and exploration of the data.
 - It also includes a Python script used to perform statistical t-tests, which are incorporated into one of the visualizations for comparative analysis.
 
+### `.html` & `.css` Files
+- Each `.html` file corresponds to a different page on the website (e.g., home, visualizations, survey).
+- Each `.html` file is paired with a `.css` file that handles layout, styling, and responsiveness.
+- The `index.html` file **does not** have an associated CSS file. Its only purpose is to initialize the deployment via GitHub Pages and redirect users to the homepage.
+
 ### `heart_2020_cleaned.csv`
 - A cleaned CSV dataset containing heart disease-related information used for visualizations and statistical modeling.
 - The data originates from the CDC's Behavioral Risk Factor Surveillance System (BRFSS) and can be found [here.](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease)
 
+### `Research_Question_5_analysis.ipynb`
+- This file contains the code calculating the t-statistics for the chart answering research question 5 on the website.
+
 ### `heart_disease.jpg`
 - A background image used for the homepage of the website to enhance visual appeal and context.
-
-### Final Analysis Report
-- This report outlines the background and motivation behind the project.
-- It provides a detailed explanation of the codebase, the algorithms used, and how the different files work together.
-- The document serves as a comprehensive overview of the development process and technical implementation.
 
 ---
 
