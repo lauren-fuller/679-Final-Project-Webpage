@@ -1,37 +1,41 @@
+/* Header Container */
 .viz-header {
-    width: 100%;
-    padding: 20px 10px;
-    background-color: #f8f9fa; /* light gray or match the viz.html tone */
-    text-align: center;
-    border-bottom: 2px solid gray;
-    box-shadow: none; /* removes boxy shadow */
-    border-radius: 0; /* removes rounded corners */
-    margin: 0 auto;
+    width: 100%; /* Full-width layout */
+    padding: 20px 10px; /* Inner spacing: top/bottom 20px, left/right 10px */
+    background-color: #f8f9fa; 
+    text-align: center; 
+    border-bottom: 2px solid gray; /* Bottom separator line */
+    box-shadow: none; 
+    border-radius: 0; 
+    margin: 0 auto; 
 }
 
-
+/* Header Title Styling */
 .viz-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
 }
 
+/* Header Paragraph Styling (description/disclaimer) */
 .viz-header p {
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
     color: #555;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
+/* Bootstrap Container Fluid (extra vertical spacing for layout) */
 .container-fluid {
-    margin-top: 30px;
+    margin-top: 30px; /* Push content downward slightly */
 }
 
+/* Box Styling for Survey Section */
 .survey-box {
-    padding: 40px;
-    background-color: #ffffff;
-    border: 2px solid gray;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: 30px auto; /* centers it with spacing */
+    padding: 40px; 
+    background-color: #ffffff; 
+    border: 2px solid gray; 
+    border-radius: 8px; /* Rounded corners for soft card-like look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 900px; /* Limit width for content focus */
+    margin: 30px auto; /* Center the box with vertical spacing */
 }
