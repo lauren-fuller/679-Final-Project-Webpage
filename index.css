@@ -1,95 +1,64 @@
-nav{
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    background-color:rgb(51, 67, 67);
-    padding: 10px;
-
-}
-nav ul{
+/* Navigation Bar Container */
+nav {
+    font-weight: bold; /* Bold text for all nav items */
+    text-align: center; 
+    display: flex; /* Use flexbox for layout */
+    background-color: rgb(51, 67, 67); 
+    padding: 10px; 
 }
 
-nav ul li{
-    list-style-type: none;
-    display: inline-block;
+/* Navigation List Container */
+nav ul {
+    /* Could define flex layout here, but inherited from parent <nav> */
+}
+
+/* Navigation List Items */
+nav ul li {
+    list-style-type: none; /* Remove default bullet points */
+    display: inline-block; /* Show items in a row */
     padding-left: 100px;
-    font-size: large;
-}
-  
-nav a{
-    text-decoration: none;
-    color: rgb(225, 213, 213);
+    font-size: large; 
 }
 
-nav a:hover{
-    color: rgb(16, 16, 163);
+/* Navigation Link Styling */
+nav a {
+    text-decoration: none; 
+    color: rgb(225, 213, 213); 
 }
 
-.row1, .row2, .row3, .row4, .row5{
+/* Navigation Link Hover Effect */
+nav a:hover {
+    color: rgb(16, 16, 163); /* Change color to strong blue on hover */
+}
+
+/* Section Row Layouts (Used in Main Content) */
+.row1, .row2, .row3, .row4, .row5 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start; 
-    padding:0px; 
-    width:100%;
-    padding: 10px;
-    border: 2px solid gray;
-    height: 350px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Spread out items inside */
+    align-items: flex-start; /* Align items to the top */
+    padding: 10px; 
+    width: 100%; 
+    border: 2px solid gray; 
+    height: 350px; /* Fixed height for uniform layout */
 }
 
-.viz1, .viz2{
+/* Visualization Containers (inside row sections) */
+.viz1, .viz2 {
     flex: 1;
-    display: flex;
-    font-size: small;
-    padding: 10px;
-}
-  
- /* nav ul {
-    list-style: none;
-} */
-/*
-nav ul ul{
-    position: absolute; 
-    padding: 0; 
-    display: none;
-    background-color: #bcbdc1;
+    display: flex; 
+    font-size: small; 
+    padding: 10px; 
 }
 
-nav ul ul li{
-    border: 1px solid #00005d; 
-    display: block;
-    width: 7em;
-    padding: 5px;
-    margin-left: 0;
-    padding-left: 1em;
+/* Wrapper for Entire Page */
+#wrapper {
+    background-color: #90c7e3; /* Fallback background color */
+    background-image: linear-gradient(white, lightblue); /* Gradient from top to bottom */
+    background-repeat: no-repeat; /* Prevent repeating the gradient */
 }
 
-nav li:hover ul{
-    display: block;
-}
-
-nav li{
-    border-bottom: 1px solid darkblue;
-} */
-
-/* main li{
-    padding:5px;
-}
-main{
-    display: flex;
-    background-color: whitesmoke;
-    overflow: auto; 
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-} */
-
-#wrapper{
-    background-color: #90c7e3;
-    background-image: linear-gradient(white,lightblue);
-    background-repeat: no-repeat;
-}
-
-body{
-    text-align: center;
+/* Global Body Styling */
+body {
+    text-align: center; /* Center-align all text by default */
 }
