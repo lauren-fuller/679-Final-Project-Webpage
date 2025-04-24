@@ -1,0 +1,14 @@
+{
+  "name": "91b8027dd4dd7e4e",
+  "main": "91b8027dd4dd7e4e@322.js",
+  "version": "322.0.0",
+  "homepage": "https://observablehq.com/d/91b8027dd4dd7e4e",
+  "author": {
+    "name": "Heart Disease Data",
+    "url": "https://observablehq.com/@heart-disease-data"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
